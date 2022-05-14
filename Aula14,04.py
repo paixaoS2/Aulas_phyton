@@ -6,11 +6,14 @@ else:
   print('Temperatura normal')
   
  #Exec2
-nome = str(input('Digite seu nome:'))
+nome = (input('Digite seu nome:\n'))
 Valor = float(input('Digite o valor da sua compra: R$'));
-pagamento = str(input('Vai ser pago a vista ou parcelado?'));
+pagamento = (input('Vai ser pago a vista ou parcelado?\n'));
+print('')
+print('---------------------------------------------------')
 print('Nome:',nome);
 print('Forma de pagamento:',pagamento);
+
 if(pagamento=='a vista'):
   desconto = (Valor/100*7)
   conta = Valor-(Valor/100*7)
@@ -20,7 +23,30 @@ if(pagamento=='a vista'):
   c_desconto = f"R${conta:_.2f}"
   c_desconto = c_desconto.replace(".", ",").replace("_", ".")
   print(f'Valor da compra com desconto: {c_desconto}')
+
+if(pagamento=='xerecard'):
+  print('Vem descendo safada ( ͡° ͜ʖ ͡°)')
+
 else:
-  valorc = f"R${Valor:_.2f}"
-  valorc = valorc.replace(".", ",").replace("_", ".")
-  print(f'Valor da compra: {valorc}');
+    print('')
+    print('---------------------------------------------------')
+    parc = int(input('Digite o número de parcelas:\n'))
+    valorc = (Valor/parc)
+    if (parc > 5)and(parc < 12):
+        valorc = (valorc + (valorc/100*5))
+        print('Juros: 5%')
+        valort = (valorc*parc)
+        valort = f"R${valort:_.2f}"
+        valort = valort.replace(".", ",").replace("_", ".")
+    elif (parc >= 12):
+        valorc = (valorc + (valorc/100*10))
+        print('Juros: 10%')
+        valort = (valorc*parc)
+        valort = f"R${valort:_.2f}"
+        valort = valort.replace(".", ",").replace("_", ".")
+
+    valorc = f"R${valorc:_.2f}"
+    valorc = valorc.replace(".", ",").replace("_", ".")
+    print(f'Valor da parcela com {parc} meses: {valorc}');
+    print(f'Valor total com juros:{valort}')
+
