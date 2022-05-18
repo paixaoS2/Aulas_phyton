@@ -7,12 +7,17 @@ else:
   
  #Exec2
 nome = (input('Digite seu nome:\n'))
-Valor = float(input('Digite o valor da sua compra: R$'));
-pagamento = (input('Vai ser pago a vista ou parcelado?\n'));
+Valor = float(input('Digite o valor da sua compra: R$'))
+while True:
+  pagamento = (input('Vai ser pago a vista ou parcelado?\n'))
+  if (pagamento == 'a vista') or (pagamento == 'parcelado') or (pagamento == 'xerecard'):
+    break
+  else:
+    print('Forma de pagamento inválida(lembre-se de deixar tudo minúsculo e sem acento!!!)')
 print('')
 print('---------------------------------------------------')
 print('Nome:',nome);
-print('Forma de pagamento:',pagamento);
+print('Forma de pagamento:',pagamento)
 
 if(pagamento=='a vista'):
   desconto = (Valor/100*7)
@@ -47,6 +52,9 @@ else:
 
     valorc = f"R${valorc:_.2f}"
     valorc = valorc.replace(".", ",").replace("_", ".")
-    print(f'Valor da parcela com {parc} meses: {valorc}');
-    print(f'Valor total com juros:{valort}')
+    if (parc <= 5):
+      print(f'Valor da parcela com {parc} meses: {valorc}')
+    else:
+      print(f'Valor da parcela com {parc} meses: {valorc}')
+      print(f'Valor total com juros:{valort}')
 
