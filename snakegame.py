@@ -56,27 +56,7 @@ while True:
         snake.append((0,0))
         snake.append((0,0))
         snake.append((0,0))
-        snake.append((0,0))
-        snake.append((0,0))
-        snake.append((0,0))
-        snake.append((0,0))
-        snake.append((0,0))
-        snake.append((0,0))
-        snake.append((0,0))
-        snake.append((0,0))
-        snake.append((0,0))
-        snake.append((0,0))
-        snake.append((0,0))
-        snake.append((0,0))
-        snake.append((0,0))
-        snake.append((0,0))
-        snake.append((0,0))
-        snake.append((0,0))
-        snake.append((0,0))
-        snake.append((0,0))
-        snake.append((0,0))
-        snake.append((0,0))
-        snake.append((0,0))
+
         C += 1
 
 
