@@ -37,7 +37,8 @@ while True:
         c = input('Mais alguma coisa?(s/n)')
         if c == 'n':
             break
-#É basicamente isso
+#É basicamente isso, vídeo aula que eu assisti da solidy:
+#https://www.youtube.com/watch?v=qbFTc5EAuZ0
 
 
 
